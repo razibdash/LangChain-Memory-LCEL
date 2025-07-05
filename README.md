@@ -57,3 +57,42 @@ See [requirements.txt](d:/AI/LangChain%20Memory%20&%20LCEL/requirements.txt) for
 ## Usage
 
 Open [LangChain_Memory_LCEL.ipynb](d:/AI/LangChain%20Memory%20&%20LCEL/LangChain_Memory_LCEL.ipynb) in Jupyter or VS Code and run the cells to explore each topic
+
+# LangChain Memory
+
+This project demonstrates how to use different memory types in LangChain to enable conversational context and history in LLM-powered applications.
+
+## Topics Covered
+
+### 1. Environment Setup
+
+- Loads environment variables using `python-dotenv` for secure API key management (e.g., `GROQ_API_KEY`).
+
+### 2. Using Groq LLM with LangChain
+
+- Initializes a `ChatGroq` model with custom parameters for use in conversational chains.
+
+### 3. Conversation Buffer Memory
+
+- **ConversationBufferMemory** keeps a list of all chat messages in a buffer and passes them into the prompt template.
+- Demonstrates how to set up a prompt with `MessagesPlaceholder` to inject chat history.
+- Shows how to use `LLMChain` with buffer memory to maintain conversation state.
+- Example: The model remembers the user's name and occupation across multiple turns.
+
+### 4. Inspecting Memory Buffer
+
+- Shows how to print the memory buffer to inspect the stored conversation history.
+
+### 5. Conversation Buffer Window Memory
+
+- **ConversationBufferWindowMemory** keeps only the most recent `k` messages in memory.
+- Demonstrates how to use `ConversationChain` with window memory to limit the context window.
+- Example: Only the last 3 exchanges are remembered by the model.
+
+## Requirements
+
+See `requirements.txt` for the full list of dependencies.
+
+## Usage
+
+Open `Memory_langchain.ipynb` in Jupyter or VS Code and run the cells to explore each
